@@ -61,7 +61,7 @@
     <mat-paginator [length]="length"
       [pageSize]="pageSize"
       [pageSizeOptions]="pageSizeOptions"
-      (page)="pageEvent = getServerData($event)"
+      (page)="getServerData($event)"
       aria-label="Select page">
   </mat-paginator>
   </mat-grid-tile>

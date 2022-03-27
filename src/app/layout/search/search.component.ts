@@ -104,7 +104,7 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  onSortChange()
+  onSortChange($event)
   {
     console.log("onSortChange");
     this.params = {
