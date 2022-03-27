@@ -3,7 +3,7 @@
 built on top of [Angular](https://angular.io).
 
 ### Build Repo 
-- Repository for compiled code was stored in [Github] (https://github.com/hideayard/BalaBali-GiF-Build)
+- Repository for compiled code was stored in [https://github.com/hideayard/BalaBali-GiF-Build](https://github.com/hideayard/BalaBali-GiF-Build)
 
 ### Demo
 - Demo can be seen at [https://balabali-gif-build.pages.dev](https://balabali-gif-build.pages.dev/)
@@ -14,7 +14,7 @@ built on top of [Angular](https://angular.io).
 ### To dos 
 - [x] Understanding the test requirements
 - [x] Understanding the usage of used Stack
-    - [x] Understand the UI Libraries such as [Angular Material](https://material.angular.io/), [ngx-bootstrap] (https://valor-software.com/ngx-bootstrap/#/), etc.
+    - [x] Understand the UI Libraries such as [Angular Material](https://material.angular.io/), [ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/), etc.
     - [x] Understand the [Angular](https://angular.io)
     - [x] Understand the [Github API](https://api.github.com/)
 - [x] Main tasks
@@ -37,9 +37,9 @@ built on top of [Angular](https://angular.io).
 - [x] Complete Documentation (README and Codes)
 
 ### Requirements 
-1. Node Js
-2. NPM 
-3. [Angular cli v8](https://angular.io)
+1. [Node Js](https://nodejs.org/)
+2. [NPM](https://www.npmjs.com/)
+3. [Angular cli](https://github.com/angular/angular-cli)
 
 ### Contributors 
 1. Achmad Alfian Hidayat 
