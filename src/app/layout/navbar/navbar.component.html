@@ -2,12 +2,12 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <button mat-icon-button>
-      <mat-icon >menu</mat-icon>
+      <mat-icon [routerLink]="'/search'">menu</mat-icon>
     </button>
     <h1>GiF</h1>
     <span class="menu-spacer"></span>
     <div>
-      <a mat-button [routerLink]="'/home'"> Home </a>
+      <!-- <a mat-button [routerLink]="'/home'"> Home </a> -->
       <a mat-button [routerLink]="'/search'"> Search Repositories </a>
       <a mat-button [routerLink]="'/about'"> About </a>
 
