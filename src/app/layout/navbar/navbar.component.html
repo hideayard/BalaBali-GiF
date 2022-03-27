@@ -1,0 +1,20 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon >menu</mat-icon>
+    </button>
+    <h1>GiRL</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/home'"> Home </a>
+      <a mat-button [routerLink]="'/search'"> Search Repositories </a>
+      <a mat-button [routerLink]="'/about'"> About </a>
+
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+      <span style="font-size: 12px;">GiRL (Git Repositories Libraries Service) helps you easily find your repositories</span>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,38 @@
+<mat-grid-list cols="1" rowHeight="5em">
+
+  <mat-grid-tile>
+    <form class="example-form">
+      <br><br><br>
+      <h2>Search Here</h2>
+      <hr>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Input</mat-label>
+        <input matInput >
+      </mat-form-field>
+    </form>
+
+
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Type a Name</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Type a Name"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </mat-grid-tile>
+
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
