@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from "@angular/common/http";
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class GitService {
 
+  repoSelected: Subject<string> = new Subject<string>();
+  repoSelectedObs = this.repoSelected.asObservable();
+
   constructor(
     private _httpClient: HttpClient
   ) {
+    this.repoSelected.next('');
   }
 
   getAll() {

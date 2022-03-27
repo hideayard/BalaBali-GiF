@@ -1,1 +1,81 @@
-<p>detail works!</p>
+<h2 mat-dialog-title style="text-align: center;"><u>Repository Detail - {{detailRepo.full_name}}</u></h2>
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+<mat-dialog-content class="mat-typography">
+  <div style="text-align: center;">
+    <h1><strong>@{{detailRepo.owner.login}}</strong></h1>
+    <img src="{{detailRepo.owner.avatar_url}}" alt="{{detailRepo.owner.login}}" style="width: 400px; height: 400px;">
+  </div>
+  <div style="text-align: center;">
+    <table>
+      <tr>
+        <td>
+          <h3>Description</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.description}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Language</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.language}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Created at</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.created_at | date:'dd MMMM yyyy'}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Updated at</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.updated_at | date:'dd MMMM yyyy'}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Open Issues</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.open_issues}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Watchers</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.watchers}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Forks</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.forks}}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Stars</h3>
+        </td>
+        <td>
+          <p>{{detailRepo.stargazers_count}}</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+
+</mat-dialog-actions>

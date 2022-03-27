@@ -14,6 +14,7 @@ import { LayoutModule } from './layout/layout.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatFormFieldModule } from  '@angular/material';
+import { DetailModule } from './layout/detail/detail.module';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
     MatMenuModule,
     MatSliderModule,
     LayoutModule,
-
+    DetailModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,

@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { GitService} from "../../service/git.service";
-import {PageEvent} from '@angular/material/paginator';
 import {
+  PageEvent,
+  MatDialog,
   MatSnackBar,
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
-} from '@angular/material/snack-bar';
+} from '@angular/material';
+import { Router } from '@angular/router';
+import { DetailComponent } from '../detail/detail.component';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -40,13 +44,24 @@ export class SearchComponent implements OnInit {
     order : this.form.order,
   };
 
+  reponame: string = '';
+
   constructor(
     private gitService: GitService,
-    private _snackBar: MatSnackBar
-  ) { }
+    private _snackBar: MatSnackBar,
+    public dialog: MatDialog,
+    public router: Router
+  ) {
+    this.gitService.repoSelectedObs.subscribe(
+      (res: any) => {
+        this.reponame = res;
+      }
+    )
+  }
 
   ngOnInit() {
     this.loadData(this.params);
+
   }
 
   submit()
@@ -76,17 +91,16 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  loadAllData(event?:PageEvent){
+  showDetail(name){
     this.loading = true;
-    this.gitService.getAll()
-    .subscribe((res: any) => {
-        this.loading = false;
-        console.log(res);
-        this.dataRepo = res;
+    // this.router.navigate(['/detail', name]);
+    this.reponame = name;
+    this.gitService.repoSelected.next(this.reponame);
+    const dialogRef = this.dialog.open(DetailComponent,{data:{name:name}});
 
-    }, (err) => {
-        this.loading = false;
-        console.log(err);
+    dialogRef.afterClosed().subscribe(result => {
+      this.loading = false;
+      console.log(`Dialog result: ${result}`);
     });
   }
 
@@ -147,3 +161,5 @@ export class SearchComponent implements OnInit {
   }
 
 }
+
+

@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { HomeComponent } from './home/home.component';
-
 import { SearchComponent } from './search/search.component';
-import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
 import { MatCardModule,
          MatProgressBarModule,
@@ -26,7 +24,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     LayoutComponent,
     HomeComponent,
     SearchComponent,
-    DetailComponent,
     AboutComponent
   ],
   imports: [
@@ -47,7 +44,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatOptionModule,
     MatDialogModule,
     MatProgressBarModule
-
   ]
 })
 export class LayoutModule { }
