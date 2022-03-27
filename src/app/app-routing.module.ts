@@ -8,7 +8,7 @@ import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: LayoutComponent},
+  { path: 'home', component: SearchComponent},
   { path: 'about', component: AboutComponent},
   { path: "search", component: SearchComponent, children: [
     { path: 'detail', component: DetailComponent }
