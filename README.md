@@ -3,8 +3,15 @@ Achmad Alfian, [27/03/2022 1:45]
 **GiF** (**Gi**t Repositories **F**inder) is a SPA (Single Page Application) 
 built on top of [Angular](https://angular.io).
 
-### Takeaway comments ###
+### Build Repo 
+- Repository for compiled code was stored in [https://github.com/hideayard/BalaBali-GiF-Build] (https://github.com/hideayard/BalaBali-GiF-Build)
 
+### Demo
+- Demo can be seen at [https://balabali-gif-build.pages.dev](https://balabali-gif-build.pages.dev/)
+
+### Takeaway comments ###
+- [x] Successfully deploy the code on cloudflare pages.
+- building apps from scratch takes more time than i anticipated, but the main objective was done. but the design is still bad. (previously i prepared some templates/boilerplate for the project. but later on, i realized on the test notes that the project must be build from scratch, so it takes me more time)
 ### To dos 
 - [x] Understanding the test requirements
 - [x] Understanding the usage of used Stack
@@ -35,24 +42,26 @@ built on top of [Angular](https://angular.io).
 2. NPM 
 3. [Angular cli v11](https://github.com/TeskaLabs/asab)
 
-### How to use 
-1. Install required stacks 
-
 ### Contributors 
 1. Achmad Alfian Hidayat 
 ([github](https://github.com/hideayard), 
-[gitlab](https://gitlab.com/hideayard), 
-)
+[gitlab](https://gitlab.com/hideayard))
 
 ### Important resources 
 1. API data sources
     - Main page: https://api.github.com/
-
+2. Angular Documentation
+    - Main page: https://angular.io/
+3. Angular Material
+    - Main page: https://material.angular.io/
 ### License 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-#
-# GiF
+### How to use 
+1. Install required stacks (nodeJS, npm, angular CLI)
+2. Install Text Editor to edit code like Visual Studio Code
+3. Open Terminal, 
+# GiF 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
