@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "girls": {
+    "gif": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/girls",
+            "outputPath": "dist/gif",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "girls:build"
+            "browserTarget": "gif:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "girls:build:production"
+              "browserTarget": "gif:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "girls:build"
+            "browserTarget": "gif:build"
           }
         },
         "test": {
@@ -115,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "girls:serve"
+            "devServerTarget": "gif:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "girls:serve:production"
+              "devServerTarget": "gif:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "girls"
+  "defaultProject": "gif"
 }

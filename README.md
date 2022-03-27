@@ -1,6 +1,6 @@
 Achmad Alfian, [27/03/2022 1:45]
-# GiRL #
-**GiRL** (**Gi**t **R**Repositories **L**ibrary) is a SPA (Single Page Application) 
+# GiF #
+**GiF** (**Gi**t Repositories **F**inder) is a SPA (Single Page Application) 
 built on top of [Angular](https://angular.io).
 
 ### Takeaway comments ###
@@ -52,7 +52,7 @@ built on top of [Angular](https://angular.io).
 [MIT](https://choosealicense.com/licenses/mit/)
 
 #
-# Girls
+# GiF
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
