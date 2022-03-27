@@ -58,6 +58,13 @@ export class SearchComponent implements OnInit {
     }
     else
     {
+      this.params = {
+        q : this.form.text,
+        per_page : this.pageSize,
+        page : this.page,
+        sort : this.form.sort,
+        order : this.form.order,
+      };
       this.loadData(this.params);
     }
   }
@@ -86,6 +93,13 @@ export class SearchComponent implements OnInit {
   onSortChange()
   {
     console.log("onSortChange");
+    this.params = {
+      q : this.form.text,
+      per_page : this.pageSize,
+      page : this.page,
+      sort : this.form.sort,
+      order : this.form.order,
+    };
     this.loadData(this.params);
   }
 
