@@ -3,7 +3,7 @@
 built on top of [Angular](https://angular.io).
 
 ### Build Repo 
-- Repository for compiled code was stored in [https://github.com/hideayard/BalaBali-GiF-Build] (https://github.com/hideayard/BalaBali-GiF-Build)
+- Repository for compiled code was stored in [Github] (https://github.com/hideayard/BalaBali-GiF-Build)
 
 ### Demo
 - Demo can be seen at [https://balabali-gif-build.pages.dev](https://balabali-gif-build.pages.dev/)
@@ -39,7 +39,7 @@ built on top of [Angular](https://angular.io).
 ### Requirements 
 1. Node Js
 2. NPM 
-3. [Angular cli v11](https://github.com/TeskaLabs/asab)
+3. [Angular cli v8](https://angular.io)
 
 ### Contributors 
 1. Achmad Alfian Hidayat 
