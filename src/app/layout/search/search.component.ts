@@ -32,13 +32,21 @@ export class SearchComponent implements OnInit {
 
   durationInSeconds = 2;
 
+  params = {
+    q : this.form.text,
+    per_page : this.pageSize,
+    page : this.page,
+    sort : this.form.sort,
+    order : this.form.order,
+  };
+
   constructor(
     private gitService: GitService,
     private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
-    this.loadData();
+    this.loadData(this.params);
   }
 
   submit()
@@ -50,24 +58,7 @@ export class SearchComponent implements OnInit {
     }
     else
     {
-      const params = {
-        q : this.form.text,
-        per_page : this.pageSize,
-        page : this.page,
-        sort : this.form.sort,
-        order : this.form.order,
-      };
-      this.loading = true;
-      this.gitService.searchRepo(params)
-      .subscribe((res: any) => {
-          this.loading = false;
-          console.log(res);
-          this.dataRepo = res.items;
-
-      }, (err) => {
-          this.loading = false;
-          console.log(err);
-      });
+      this.loadData(this.params);
     }
   }
 
@@ -95,25 +86,18 @@ export class SearchComponent implements OnInit {
   onSortChange()
   {
     console.log("onSortChange");
-    this.loadData();
+    this.loadData(this.params);
   }
 
-  loadData()
+  loadData(params)
   {
-    const params = {
-      q : this.form.text,
-      per_page : this.pageSize,
-      page : this.page,
-      sort : this.form.sort,
-      order : this.form.order,
-    };
     this.loading = true;
     this.gitService.searchRepo(params)
     .subscribe((res: any) => {
         this.loading = false;
         console.log(res);
         this.dataRepo = res.items;
-
+        this.length = res.total_count;
     }, (err) => {
         this.loading = false;
         console.log(err);
@@ -143,17 +127,8 @@ export class SearchComponent implements OnInit {
         sort : this.form.sort,
         order : this.form.order,
       };
-      this.loading = true;
-      this.gitService.searchRepo(params)
-      .subscribe((res: any) => {
-          this.loading = false;
-          console.log(res);
-          this.dataRepo = res.items;
+      this.loadData(params);
 
-      }, (err) => {
-          this.loading = false;
-          console.log(err);
-      });
     }
   }
 
