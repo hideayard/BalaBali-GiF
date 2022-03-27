@@ -1,4 +1,3 @@
-Achmad Alfian, [27/03/2022 1:45]
 # GiF #
 **GiF** (**Gi**t Repositories **F**inder) is a SPA (Single Page Application) 
 built on top of [Angular](https://angular.io).
