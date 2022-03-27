@@ -1,4 +1,7 @@
+
 <br>
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
 <div style="text-align: center;">
   <h2>Search Here</h2>
   <br>
@@ -46,12 +49,11 @@
           </mat-card-header>
           <mat-card-content class="left">
             <span> <mat-icon>account_tree</mat-icon> {{data.forks}} </span>
-            <span> <mat-icon>star</mat-icon> {{data.stargazers_count}} </span>
-            <span> Updated at {{data.updated_at | date:'dd MMMM yyyy'}}</span>
+            <span> - <mat-icon>star</mat-icon> {{data.stargazers_count}} </span>
+            <span> - Updated at {{data.updated_at | date:'dd MMMM yyyy'}}</span>
+            <span> . <button mat-stroked-button color="primary" (click)="showDetail(data.full_name)">More Info</button></span>
           </mat-card-content>
-          <!-- <mat-card-actions>
-            <button mat-button>More Info</button>
-          </mat-card-actions> -->
+          <!-- <mat-card-actions> </mat-card-actions> -->
         </mat-card>
       </mat-grid-tile>
   </div>

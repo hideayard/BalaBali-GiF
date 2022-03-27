@@ -6,7 +6,20 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
-import { MatCardModule, MatFormFieldModule, MatGridListModule, MatMenuModule, MatIconModule, MatButtonModule, MatAutocompleteModule, MatInputModule, MatPaginatorModule,MatSnackBarModule, MatSelectModule, MatOptionModule } from  '@angular/material';
+import { MatCardModule,
+         MatProgressBarModule,
+         MatFormFieldModule,
+         MatGridListModule,
+         MatMenuModule,
+         MatIconModule,
+         MatButtonModule,
+         MatAutocompleteModule,
+         MatInputModule,
+         MatPaginatorModule,
+         MatSnackBarModule,
+         MatSelectModule,
+         MatOptionModule,
+         MatDialogModule } from  '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
@@ -31,7 +44,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatPaginatorModule,
     MatSnackBarModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatDialogModule,
+    MatProgressBarModule
 
   ]
 })
